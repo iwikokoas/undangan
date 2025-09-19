@@ -44,12 +44,13 @@ export default function WishSection() {
     }
 
     if (message.length < 10) {
-      setError('Pesan minimal 10 karakter!');
+      setError('Pesan minimal 10 karakter! Mohon tambahkan detail lagi.');
       return;
     }
 
-    if (badwords.flag(name)) {
-      setError('Gabolah kata kasar!');
+    // Block if there is any bad word in name or message
+    if (badwords.flag(name) || badwords.flag(message)) {
+      setError('Hindari kata-kata kasar pada nama atau pesan.');
       return;
     }
 
@@ -58,11 +59,10 @@ export default function WishSection() {
 
     // random color based data length
     const randomColor = colorList[data.length % colorList.length];
-    const newmessage = badwords.censor(message);
     const { error } = await supabase
       .from(import.meta.env.VITE_APP_TABLE_NAME) // Replace with your actual table name
       .insert([
-        { name, message: newmessage, color: randomColor }, // Assuming your table has a "name" column
+        { name, message, color: randomColor }, // Assuming your table has a "name" column
       ]);
 
     setLoading(false);
