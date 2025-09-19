@@ -1,6 +1,33 @@
 import React, { forwardRef, useEffect, useRef, useState } from 'react';
 import supabase from '../../../lib/supabaseClient';
-import badwords from 'indonesian-badwords';
+
+// Basic Indonesian profanity check using word boundaries to reduce false positives
+function containsProfanity(input) {
+  if (!input) return false;
+  const text = String(input)
+    .normalize('NFKD')
+    .replace(/\p{Diacritic}+/gu, '')
+    .toLowerCase();
+  // Add/adjust as needed. Uses strict word boundaries to avoid substrings like "Sanjaya" → "anjay".
+  const badPatterns = [
+    /\banjay\b/,
+    /\banj\b/, // short slang
+    /\banjing\b/,
+    /\banjingan\b/,
+    /\bkontol\b/,
+    /\bmemek\b/,
+    /\bngentot\b/,
+    /\bbangsat\b/,
+    /\bbrengsek\b/,
+    /\bgoblok\b/,
+    /\btolol\b/,
+    /\bpepek\b/,
+    /\bidiot\b/,
+    /\bkampret\b/,
+    /\bkimak\b/
+  ];
+  return badPatterns.some((re) => re.test(text));
+}
 
 const WishItem = forwardRef(({ name, message, color }, ref) => (
   <div ref={ref} className="flex gap-2">
@@ -48,8 +75,8 @@ export default function WishSection() {
       return;
     }
 
-    // Block if there is any bad word in name or message
-    if (badwords.flag(name) || badwords.flag(message)) {
+    // Block if there is any bad word in name or message (boundary-checked)
+    if (containsProfanity(name) || containsProfanity(message)) {
       setError('Hindari kata-kata kasar pada nama atau pesan.');
       return;
     }
