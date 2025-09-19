@@ -61,6 +61,7 @@ export default function WishSection() {
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const tableName = import.meta.env.VITE_APP_TABLE_NAME || 'nikahfix';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -87,7 +88,7 @@ export default function WishSection() {
     // random color based data length
     const randomColor = colorList[data.length % colorList.length];
     const { error } = await supabase
-      .from(import.meta.env.VITE_APP_TABLE_NAME) // Replace with your actual table name
+      .from(tableName)
       .insert([
         { name, message, color: randomColor }, // Assuming your table has a "name" column
       ]);
@@ -108,7 +109,7 @@ export default function WishSection() {
 
   const fetchData = async () => {
     const { data, error } = await supabase
-      .from(import.meta.env.VITE_APP_TABLE_NAME) // Replace 'your_table' with the actual table name
+      .from(tableName)
       .select('name, message, color');
 
     if (error) console.error('Error fetching data: ', error);
