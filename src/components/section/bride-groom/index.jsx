@@ -19,7 +19,7 @@ export default function Bridegroom() {
               {data.pegantin.wanita.nama}
             </h4>
             <p className="text-[#A3A1A1] text-xs leading-4 mt-2">
-              Putri dari {data.pegantin.wanita.bapak} &amp; Ibu{' '}
+              Putra dari {data.pegantin.wanita.bapak} &amp; Ibu{' '}
               {data.pegantin.wanita.ibu}
             </p>
           </div>
@@ -35,7 +35,7 @@ export default function Bridegroom() {
               {data.pegantin.pria.nama}
             </h4>
             <p className="text-[#A3A1A1] text-xs leading-4 mt-2">
-              Putra dari {data.pegantin.pria.bapak} &amp; Ibu{' '}
+              Putri dari {data.pegantin.pria.bapak} &amp; Ibu{' '}
               {data.pegantin.pria.ibu}
             </p>
           </div>
@@ -44,3 +44,4 @@ export default function Bridegroom() {
     </div>
   );
 }
+
