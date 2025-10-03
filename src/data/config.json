@@ -4,14 +4,14 @@
       "foto": "https://ypmnoiirxuqyierdbwkl.supabase.co/storage/v1/object/public/foto%20dan%20vid/ikok.jpg",
       "panggilan": "Rizki",
       "nama": "Rizki Dwi Putra",
-      "bapak": "Toni Gunawan (Alm)",
+      "bapak": " Bapak Toni Gunawan (Alm)",
       "ibu": "Tine Martinia"
     },
     "pria": {
       "foto": "https://ypmnoiirxuqyierdbwkl.supabase.co/storage/v1/object/public/foto%20dan%20vid/gege.jpg",
       "panggilan": "Gina",
       "nama": "Gina Destiana",
-      "bapak": "Dedi Supriadi (Alm)",
+      "bapak": " Bapak Dedi Supriadi (Alm)",
       "ibu": "Teti Haryati"
     }
   },
@@ -21,7 +21,7 @@
   "url_video": "https://ypmnoiirxuqyierdbwkl.supabase.co/storage/v1/object/public/foto%20dan%20vid/video2.mp4",
   "intro": "Setelah Rizki dan Gina dipertemukan dalam situasi yang tepat, di mana keduanya telah siap untuk memulai hubungan bersama, tibalah mereka di awal perjalanan baru menuju pernikahan.",
   "breaking_news_img": "https://ypmnoiirxuqyierdbwkl.supabase.co/storage/v1/object/public/foto%20dan%20vid/rizki%20&%20gina%20(1).jpg",
-  "breaking_news_content": "<p>Halo! Karena kalian adalah orang penting yang mengisi hari-hari kami, kami ingin informasikan bahwa kami akan segera menikah! &lt;3 </p><p className=\"mt-4\"> Tapi sebelumnya, kami mohon maaf kepada teman dan kerabat semua karena tidak bisa mengundang kalian hadir di hari bahagia kami, dikarenakan pernikahan kami bersifat intimate wedding yang dilaksanakan di Sukabumi dan hanya dihadiri oleh keluarga dan orang terdekat.</p><p className=\"mt-4\">Walaupun begitu, kami harapkan sebaik-baiknya doa untuk kelancaran pernikahan dan hari-hari bahagia setelahnya.</p><p className=\"mt-4\">Dengan penuh cinta,</p><p>The bride and groom &lt;3</p>",
+  "breaking_news_content": "<p>Halo! Karena kalian adalah orang penting yang mengisi hari-hari kami, kami ingin mengabarkan bahwa kami akan segera menikah! &lt;3 </p> <p className="mt-4">Kami sangat bersyukur dapat berbagi kabar bahagia ini dan berharap momen spesial tersebut menjadi awal dari perjalanan baru yang penuh cinta, kebahagiaan, dan berkah.</p> <p className="mt-4">Kami juga sangat mengharapkan doa terbaik dari teman dan kerabat semua untuk kelancaran pernikahan kami serta hari-hari bahagia setelahnya.</p> <p className="mt-4">Dengan penuh cinta,</p> <p>The bride and groom &lt;3</p>",
   "love_story": [
     {
       "image_url": "https://slametandfatma.wedding/galeri/story1.jpeg",
@@ -60,5 +60,6 @@
     "wish": true
   }
 }
+
 
 
